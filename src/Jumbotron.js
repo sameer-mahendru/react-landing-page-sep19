@@ -36,8 +36,7 @@ const Jumbotron = (prop) => {
                         ref={ (inputField)=>{ emailField = inputField} }
                         placeholder="Enter email address" type="text" className="form-control"/>
                     </div>
-                    <div className="col-auto my-1">
-                        
+                    <div className="col-auto my-1">   
                     {
                         state.emailValid !== "valid" &&
                         <button 
@@ -45,8 +44,6 @@ const Jumbotron = (prop) => {
                         type="submit"
                         className="btn btn-primary">Subscribe</button>
                     }
-
-
                     </div>
                 </div>
 
