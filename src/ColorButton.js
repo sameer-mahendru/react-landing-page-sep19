@@ -2,19 +2,23 @@ import React, { useState } from 'react';
 
 const ColorButton = () => {
 
-    const [state, setState] = useState("btn-primary")
+    const [state, setState] = useState(
+        {
+            class: "btn-primary",
+            label: "save"
+        }
+    )
 
     const clickHandler = () => {
-        if(state === "btn-primary") {
-            setState("btn-danger")
-        } else {
-            setState("btn-primary")
-        }
+        setState({
+            class: "btn-success",
+            label: "done"
+        })
     }
 
     return (
         <button onClick={clickHandler} 
-        className={`btn ${state}`}></button>
+        className={`btn ${state.class}`}>{state.label}</button>
     )
 }
 
