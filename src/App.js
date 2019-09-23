@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext }  from 'react';
 import NavBar from './NavBar';
-import ColorButton from './ColorButton';
+import Feed from './Feed';
 import Jumbotron from './Jumbotron';
 import './App.css';
 
@@ -40,20 +40,7 @@ const App = () => {
             description="This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information."
           />
 
-          <ul>
-          { 
-            
-            globalState.users.map(
-              (name) => {
-                return(
-                  <li>
-                    { `My name is ${name}` }
-                  </li>
-                )
-              }
-            ) 
-          }
-          </ul>
+          <Feed />
 
       </div>
     </AppContext.Provider>
