@@ -1,16 +1,15 @@
-import React, { useState, useEffect, createContext }  from 'react';
+import React, { useState }  from 'react';
 import NavBar from './NavBar';
 import Feed from './Feed';
 import Jumbotron from './Jumbotron';
 import './App.css';
-
-export const AppContext = createContext(); // component
+import AppContext from './AppContext.js'
 
 const App = () => {
 
   const [globalState, setGlobalState] = useState(
       { 
-          loggedIn: false,
+          loggedIn: true,
           users: [
             'Jim',
             'Jane',
@@ -18,14 +17,6 @@ const App = () => {
             'Mary'
           ]
       }
-  );
-
-  useEffect(
-    ()=>{
-      if(globalState.users === 0) {
-        console.log('Fetching users...')
-      }
-    }
   );
 
   return (
@@ -41,7 +32,6 @@ const App = () => {
           />
 
           <Feed />
-
       </div>
     </AppContext.Provider>
   );
