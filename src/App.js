@@ -15,6 +15,12 @@ const App = () => {
             'Jane',
             'Mohammad',
             'Mary'
+          ],
+          feed: [
+            {user: 'Jim', comment: 'This comment is from Jim'},
+            {user: 'Jane', comment: 'Going to tennis practice tonight'},
+            {user: 'Mohammad', comment: 'Big traffic near downtown dubai'},
+            {user: 'Mary', comment: 'Graduating in 1 week! #exicted'}
           ]
       }
   );
